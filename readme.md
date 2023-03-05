@@ -9,7 +9,6 @@ This repo depends on:
 
 ## Instructions
 
-### Software requirements
 - Install golang, python
 - Install ```mcl```
    ```bash
@@ -20,4 +19,8 @@ This repo depends on:
     $ cmake --build build
     $ sudo cmake --build build --target install
     $ sudo ldconfig
+   ```
+- Run ```main.go```
+   ```bash
+    $ go run main.go
    ```
