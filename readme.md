@@ -9,7 +9,7 @@ This repo depends on:
 
 ## Instructions
 
-- Install golang, python
+- Install golang
 - Install ```mcl```
    ```bash
     $ git clone https://github.com/herumi/mcl
