@@ -84,7 +84,7 @@ func (vbas *VBAS) UpdateAll_Fake(proofs []mcl.G1, vector []mcl.Fr, req asvc.Upda
             Vector: vector,
             Step:   0,
             Proofs: proofs,
-            Count:  (1 << (vbas.asvc.L / 2)) * uint64(vbas.asvc.L) * 2,
+            Count:  (1 << (vbas.asvc.L / 2)) * uint64(vbas.asvc.L),
             Done:   false,
         }
         vbas.asvc.OpenAllStep_Fake(vbas.args)
