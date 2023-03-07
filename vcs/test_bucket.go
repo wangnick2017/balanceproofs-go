@@ -149,7 +149,7 @@ func BucketQuery_Fake() {
         vec[1].Random()
         proofs := vc.OpenAll_Fake(vec)
         aux := vc.InitAux()
-        for i := 0; i < (1<<(vc.L3/2))*(int(vc.L3))/2; i++ {
+        for i := 0; i < (1<<(vc.L3/2))*(int(vc.L3)/4*3); i++ {
             var delta mcl.Fr
             delta.Random()
             id := rand.Uint64() % vc.N3
