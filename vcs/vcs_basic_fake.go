@@ -69,7 +69,7 @@ func (vbas *VBAS) UpdateCommitment_Fake(digest mcl.G1, req asvc.UpdateReq) mcl.G
 func (vbas *VBAS) UpdateAll_Fake(proofs []mcl.G1, vector []mcl.Fr, req asvc.UpdateReq, aux []asvc.UpdateReq) ([]mcl.G1, []mcl.Fr, []asvc.UpdateReq) {
     aux = append(aux, req)
     l := uint64(len(aux))
-    if l*l < 100 {
+    if l*l < vbas.asvc.N && l < 1024/2 {
         if vbas.args == nil {
             return proofs, vector, aux
         } else {

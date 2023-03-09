@@ -206,7 +206,7 @@ func (vbuc *VBUC) UpdateAll_Fake(proofs *BucProofAll, vector []mcl.Fr, req asvc.
 
     aux[x][y] = append(aux[x][y], req)
     l := uint64(len(aux[x][y]))
-    if l*l < 8*vbuc.N3 {
+    if l < (1<<(vbuc.L3/2))*(uint64(vbuc.L3)) && l < 1024/2 {
         if vbuc.args[x][y] == nil {
             return vector, aux
         } else {
