@@ -99,11 +99,14 @@ func (vbas *VBAS) UpdateAll(proofs []mcl.G1, vector []mcl.Fr, req asvc.UpdateReq
     if vbas.args == nil || vbas.args.Done {
         vector = vbas.updateVector(vector, aux)
         vbas.P = len(aux)
+        Lp := uint8(1)
+        for ; Lp < vbas.asvc.L; Lp = Lp + Lp {
+        }
         vbas.args = &asvc.OpenAllStepArg{
             Vector: vector,
             Step:   0,
             Proofs: proofs,
-            Count:  (1 << (vbas.asvc.L / 2)) * uint64(vbas.asvc.L) / 2,
+            Count:  (1 << (vbas.asvc.L / 2)) * uint64(Lp) / 2,
             Done:   false,
         }
         vbas.asvc.OpenAllStep(vbas.args)

@@ -49,7 +49,10 @@ func BasicQuery_Fake() {
 
         aux := a.InitAux()
 
-        for i := 0; i < (1 << (L / 2)); i++ {
+        Lp := 1
+        for ; Lp < L; Lp = Lp + Lp {
+        }
+        for i := 0; i < (1<<(L/2))*L/Lp; i++ {
             var delta mcl.Fr
             delta.Random()
             id := rand.Uint64() % uint64(n)
