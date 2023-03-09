@@ -1,11 +1,11 @@
 # Balanceproofs-go
 
-The implementation of Balanceproofs in go.
+The implementation of [Balanceproofs](https://eprint.iacr.org/2022/864) in Go.
 
 This repo depends on:
-- [go-mcl](https://github.com/alinush/go-mcl/) for elliptic curve operations.
+- [go-mcl](https://github.com/alinush/go-mcl) for elliptic curve operations.
+- [go-kzg](https://github.com/protolambda/go-kzg) as a reference to implement KZG proofs.
 
-[Balanceproofs]: https://eprint.iacr.org/2022/864
 
 ## Instructions
 
